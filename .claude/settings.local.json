@@ -10,7 +10,10 @@
       "Bash(git:*)",
       "Bash(gh:*)",
       "Bash(/home/osuma/.local/bin/gh:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(dpkg -l:*)",
+      "Bash(zoxide query:*)",
+      "Bash(zsh:*)"
     ]
   },
   "hooks": {
