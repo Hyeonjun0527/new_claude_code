@@ -1,0 +1,27 @@
+# Environment
+.env
+.env.local
+*.secret
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build
+dist/
+build/
