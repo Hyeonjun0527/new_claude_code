@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:nosorae.tistory.com)",
+      "Bash(jq:*)",
+      "Bash(chmod:*)",
+      "Bash(python3:*)",
+      "WebSearch",
+      "Bash(claude mcp add:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(/home/osuma/.local/bin/gh:*)",
+      "Bash(curl:*)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/osuma/coding_stuffs/new_claude_code && git add -A && git diff --cached --quiet || (git commit -m \"auto: update $(date '+%Y-%m-%d %H:%M:%S')\" && git push origin main)"
+          }
+        ]
+      }
+    ]
+  }
+}
